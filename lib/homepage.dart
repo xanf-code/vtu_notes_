@@ -39,6 +39,7 @@ import 'package:vtunotes/QPBranch/ECE.dart';
 import 'package:vtunotes/QPBranch/MECH.dart';
 import 'package:vtunotes/animation/bouncy.dart';
 import 'package:vtunotes/models/CarouselModel.dart';
+import 'package:vtunotes/push_notification/pushnotif.dart';
 import 'package:vtunotes/screens/home.dart';
 import 'package:vtunotes/sempage/M4.dart';
 import 'package:vtunotes/sempage/civil3.dart';
@@ -204,7 +205,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               onPressed: () {
                                 newTapAd.show();
                                 Navigator.push(context,
-                                    BouncyPageRoute(widget: HomeScreen()));
+                                    BouncyPageRoute(widget: NotifPush()));
                               }),
                         ),
                       ],
