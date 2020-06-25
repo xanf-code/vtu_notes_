@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "806151960342",
+    "firebase_url": "https://vtunotes-4206f.firebaseio.com",
+    "project_id": "vtunotes-4206f",
+    "storage_bucket": "vtunotes-4206f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806151960342:android:12d4257ece695550d00237",
+        "android_client_info": {
+          "package_name": "com.notes.vtunotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806151960342-ipmp4buuqlv92ol5nrmcdgekgdrqvcbp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.notes.vtunotes",
+            "certificate_hash": "c0ef6b442ebe3464714b96c101cbca58f2baebf5"
+          }
+        },
+        {
+          "client_id": "806151960342-amemnnqt9i80qlgn3jkpovsu4kegm2eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEer1llSH1TCZt_U9mX68rtZY975KFBxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806151960342-amemnnqt9i80qlgn3jkpovsu4kegm2eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3169721157368527~2541009725"
+    }
+  ],
+  "configuration_version": "1"
+}
