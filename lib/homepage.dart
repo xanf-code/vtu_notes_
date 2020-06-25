@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
               return AlertDialog(
                 title: Text(
                   message["notification"]["title"],
-                  style: TextStyle(fontFamily: "Soleil", fontSize: 18),
+                  style: GoogleFonts.ubuntu(fontSize: 18),
                 ),
                 content: Text(message["notification"]["body"]),
                 actions: <Widget>[
