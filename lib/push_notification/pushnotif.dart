@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -37,7 +38,10 @@ class _NotifPushState extends State<NotifPush> {
           stream: Firestore.instance.collection("post").snapshots(),
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
-              return Text("Push Notifications will appear here");
+              return Center(
+                child: SpinKitWave(color: Colors.deepPurple,
+                  size: 50.0,),
+              );
             } else {
               return ListView.builder(
                   itemCount: snapshot.data.documents.length,
