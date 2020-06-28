@@ -46,6 +46,7 @@ import 'package:vtunotes/sempage/civil3.dart';
 import 'package:vtunotes/sempage/cse3.dart';
 import 'package:vtunotes/sempage/cse6.dart';
 import 'package:vtunotes/syllabus/syl.dart';
+import 'package:vtunotes/todo/todomain.dart';
 import 'package:vtunotes/widgets/provider_widget.dart';
 import 'package:wiredash/wiredash.dart';
 import 'package:supercharged/supercharged.dart';
@@ -1714,6 +1715,12 @@ class _ScaffoldOnlyState extends State<ScaffoldOnly> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  RaisedButton(
+                    onPressed: (){
+                      Navigator.push(context,
+                          BouncyPageRoute(widget: TodoApp()));
+                    },
+                  ),
                   FadeIn(
                     1,
                     Container(
