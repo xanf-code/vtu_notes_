@@ -157,6 +157,3 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
     );
   }
 }
-
-// Reason for wraping fab with builder (to get scafold context)
-// https://stackoverflow.com/a/52123080/4934757

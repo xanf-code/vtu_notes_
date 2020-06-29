@@ -46,7 +46,6 @@ import 'package:vtunotes/sempage/civil3.dart';
 import 'package:vtunotes/sempage/cse3.dart';
 import 'package:vtunotes/sempage/cse6.dart';
 import 'package:vtunotes/syllabus/syl.dart';
-import 'package:vtunotes/todo/todomain.dart';
 import 'package:vtunotes/widgets/provider_widget.dart';
 import 'package:wiredash/wiredash.dart';
 import 'package:supercharged/supercharged.dart';
@@ -514,6 +513,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
+//                  Padding(
+//                    padding: const EdgeInsets.only(
+//                        left: 15.0, right: 15.0, top: 15.0),
+//                    child: ListTile(
+//                      leading: Icon(
+//                        Octicons.tasklist,
+//                        size: 18,
+//                      ),
+//                      title: Text('Manage Tasks',
+//                          style: GoogleFonts.ubuntu(
+//                              fontWeight: FontWeight.bold, fontSize: 15),
+//                          textAlign: TextAlign.center),
+//                      onTap: () {
+//                        Navigator.push(
+//                            context, BouncyPageRoute(widget: ToDo()));
+//                      },
+//                      trailing: Icon(
+//                        Icons.arrow_forward_ios,
+//                        size: 10,
+//                      ),
+//                    ),
+//                  ),
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 15.0, right: 15.0, top: 15.0),
@@ -1715,12 +1736,17 @@ class _ScaffoldOnlyState extends State<ScaffoldOnly> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  RaisedButton(
-                    onPressed: (){
-                      Navigator.push(context,
-                          BouncyPageRoute(widget: TodoApp()));
-                    },
-                  ),
+//                  InkWell(
+//                    onTap: (){
+//                      Navigator.push(context,
+//                          BouncyPageRoute(widget: TodoApp()));
+//                    },
+//                    child: Container(
+//                      color : Colors.white,
+//                      height: 50,
+//                      width: 50,
+//                       ),
+//                  ),
                   FadeIn(
                     1,
                     Container(

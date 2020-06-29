@@ -286,9 +286,9 @@ class SimpleAlertDialog extends StatelessWidget {
                 FlatButton(
                   child: Text('Delete'),
                   onPressed: () {
-                    Navigator.push(context,
-                        BouncyPageRoute(widget: TodoApp()));
                     onActionPressed();
+                    Navigator.pop(context);
+                    Navigator.push(context,BouncyPageRoute(widget: TodoApp()));
                   },
                 ),
                 FlatButton(

@@ -140,5 +140,3 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
     );
   }
 }
-// Reason for wraping fab with builder (to get scafold context)
-// https://stackoverflow.com/a/52123080/4934757
