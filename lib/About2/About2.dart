@@ -18,9 +18,7 @@ import 'package:vtunotes/animation/bouncy.dart';
 import 'package:vtunotes/form/form.dart';
 import 'package:vtunotes/widgets/provider_widget.dart';
 
-
 class About2 extends StatefulWidget {
-
   @override
   _About2State createState() => _About2State();
 }
@@ -47,15 +45,16 @@ class _About2State extends State<About2> {
   }
 
   void _showError(dynamic exception) {
-    _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(exception.toString())));
+    _scaffoldKey.currentState
+        .showSnackBar(SnackBar(content: Text(exception.toString())));
   }
+
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     double widthScreen = mediaQueryData.size.width;
     double heightScreen = mediaQueryData.size.height;
     double paddingBottom = mediaQueryData.padding.bottom;
-
 
     return Scaffold(
       key: _scaffoldKey,
@@ -66,7 +65,8 @@ class _About2State extends State<About2> {
             Column(
               children: <Widget>[
                 _buildWidgetBackgroundCoverAlbum(widthScreen, context),
-                _buildWidgetListMusic(context, paddingBottom, widthScreen, heightScreen),
+                _buildWidgetListMusic(
+                    context, paddingBottom, widthScreen, heightScreen),
               ],
             ),
           ],
@@ -75,8 +75,10 @@ class _About2State extends State<About2> {
     );
   }
 
-  Widget _buildWidgetListMusic(BuildContext context, double paddingBottom, double widthScreen, double heightScreen) {
-    bool _theme = Theme.of(context).brightness == Brightness.dark ? true : false;
+  Widget _buildWidgetListMusic(BuildContext context, double paddingBottom,
+      double widthScreen, double heightScreen) {
+    bool _theme =
+        Theme.of(context).brightness == Brightness.dark ? true : false;
     return Expanded(
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
@@ -88,10 +90,11 @@ class _About2State extends State<About2> {
             children: <Widget>[
               SizedBox(height: 30.0),
               Padding(
-                padding: const EdgeInsets.only(left: 12.0,bottom: 8.0),
+                padding: const EdgeInsets.only(left: 12.0, bottom: 8.0),
                 child: Text(
                   'Settings',
-                  style: GoogleFonts.ubuntu(fontSize: 20,fontWeight: FontWeight.bold),
+                  style: GoogleFonts.ubuntu(
+                      fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(width: 24.0),
@@ -107,7 +110,8 @@ class _About2State extends State<About2> {
                     ),
                     title: Text("Submit Notes", style: GoogleFonts.ubuntu()),
                     onTap: () {
-                      Navigator.push(context, BouncyPageRoute(widget: UploaderForm()));
+                      Navigator.push(
+                          context, BouncyPageRoute(widget: UploaderForm()));
                     },
                   ),
                   ListTile(
@@ -115,19 +119,23 @@ class _About2State extends State<About2> {
                       Icons.library_books,
                       color: Colors.purple,
                     ),
-                    title: Text("Terms & Conditions",
-                        style: GoogleFonts.ubuntu()),
+                    title:
+                        Text("Terms & Conditions", style: GoogleFonts.ubuntu()),
                     trailing: Icon(Icons.keyboard_arrow_right),
                     onTap: () {
                       showModalBottomSheet(
-                          backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black : Colors.white,
+                          backgroundColor:
+                              Theme.of(context).brightness == Brightness.dark
+                                  ? Colors.black
+                                  : Colors.white,
                           context: context,
                           builder: (context) {
                             return SingleChildScrollView(
                               physics: BouncingScrollPhysics(),
                               child: Padding(
                                 padding: const EdgeInsets.all(16.0),
-                                child: Text("""By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Darshan Aswath.
+                                child: Text(
+                                  """By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Darshan Aswath.
 
 Darshan Aswath is committed to ensuring that the app is as useful and efficient as possible. For that reason, we reserve the right to make changes to the app or to charge for its services, at any time and for any reason. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.
 
@@ -159,7 +167,9 @@ These terms and conditions are effective as of 2020-04-16
 
 Contact Us
 
-If you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at darshanaswath@gmail.com.""",style: GoogleFonts.ubuntu(),),
+If you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at darshanaswath@gmail.com.""",
+                                  style: GoogleFonts.ubuntu(),
+                                ),
                               ),
                             );
                           });
@@ -170,19 +180,22 @@ If you have any questions or suggestions about my Terms and Conditions, do not h
                       FontAwesomeIcons.fileContract,
                       color: Colors.purple,
                     ),
-                    title:
-                    Text("Privacy Policy", style: GoogleFonts.ubuntu()),
+                    title: Text("Privacy Policy", style: GoogleFonts.ubuntu()),
                     trailing: Icon(Icons.keyboard_arrow_right),
                     onTap: () {
                       showModalBottomSheet(
-                          backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black : Colors.white,
+                          backgroundColor:
+                              Theme.of(context).brightness == Brightness.dark
+                                  ? Colors.black
+                                  : Colors.white,
                           context: context,
                           builder: (context) {
                             return SingleChildScrollView(
                               physics: BouncingScrollPhysics(),
                               child: Padding(
                                 padding: const EdgeInsets.all(16.0),
-                                child: Text("""Author Darshan Aswath built the VTUNotes app as an Ad Supported app. This SERVICE is provided by Darshan Aswath at no cost and is intended for use as is.
+                                child: Text(
+                                  """Author Darshan Aswath built the VTUNotes app as an Ad Supported app. This SERVICE is provided by Darshan Aswath at no cost and is intended for use as is.
 
 This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
 
@@ -242,7 +255,9 @@ This policy is effective as of 2020-04-16
 
 Contact Us
 
-If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at darshanaswath@gmail.com.""",style: GoogleFonts.ubuntu(),),
+If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at darshanaswath@gmail.com.""",
+                                  style: GoogleFonts.ubuntu(),
+                                ),
                               ),
                             );
                           });
@@ -259,7 +274,8 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                     ),
                     trailing: Icon(Icons.keyboard_arrow_right),
                     onTap: () {
-                      Share.share('Check Out VTUNotes app for all VTU Notes, Question papers, Placement Materials and more https://play.google.com/store/apps/details?id=com.notes.vtunotes');
+                      Share.share(
+                          'Check Out VTUNotes app for all VTU Notes, Question papers, Placement Materials and more https://play.google.com/store/apps/details?id=com.notes.vtunotes');
                     },
                   ),
                   ListTile(
@@ -269,8 +285,8 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                       ),
                       title: Text("Email", style: GoogleFonts.ubuntu()),
                       trailing: Icon(Icons.keyboard_arrow_right),
-                      onTap: () => launch("mailto:darshanaswath@gmail.com?subject=VTUNotes App")
-                  ),
+                      onTap: () => launch(
+                          "mailto:darshanaswath@gmail.com?subject=VTUNotes App")),
                   ListTile(
                     leading: Padding(
                       padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
@@ -280,8 +296,7 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                       ),
                     ),
                     title: Text("Environment", style: GoogleFonts.ubuntu()),
-                    subtitle:
-                    Text("Production", style: GoogleFonts.ubuntu()),
+                    subtitle: Text("Production", style: GoogleFonts.ubuntu()),
                     onTap: () {
                       //open change location
                     },
@@ -311,7 +326,8 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                     title: Text("Rate us", style: GoogleFonts.ubuntu()),
                     onTap: () => LaunchReview.launch(
                       androidAppId: "com.notes.vtunotes",
-                    ),),
+                    ),
+                  ),
                   ListTile(
                     leading: Padding(
                       padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
@@ -322,7 +338,8 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                     ),
                     title: Text("Credits", style: GoogleFonts.ubuntu()),
                     onTap: () {
-                      Navigator.push(context, BouncyPageRoute(widget: Credits()));
+                      Navigator.push(
+                          context, BouncyPageRoute(widget: Credits()));
                     },
                   ),
                   ListTile(
@@ -333,7 +350,8 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                         color: Colors.purple,
                       ),
                     ),
-                    title: Text("Check for updates", style: GoogleFonts.ubuntu()),
+                    title:
+                        Text("Check for updates", style: GoogleFonts.ubuntu()),
                     onTap: () => checkForUpdate(),
                   ),
                   ListTile(
@@ -356,43 +374,57 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                   style: GoogleFonts.ubuntu(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
                   ),
                 ),
               ),
-              Theme.of(context).brightness == Brightness.light ?
-              Padding(
-                padding: const EdgeInsets.only(left: 12.0),
-                child: SwitchListTile(
-                  activeColor: Colors.purple,
-                  contentPadding: const EdgeInsets.all(0),
-                  value: _theme,
-                  title: Text("Space Mode",style: GoogleFonts.ubuntu(),),
-                  subtitle: Text("Get that whiteness out of my sight",style: GoogleFonts.ubuntu(),),
-                  onChanged: (bool value){
-                    DynamicTheme.of(context).setBrightness(
-                        Theme.of(context).brightness == Brightness.light
-                            ? Brightness.dark
-                            : Brightness.light);
-                  },
-                ),
-              ) :
-              Padding(
-                padding: const EdgeInsets.only(left: 12.0),
-                child: SwitchListTile(
-                  activeColor: Colors.purple,
-                  contentPadding: const EdgeInsets.all(0),
-                  value: _theme,
-                  title: Text("Flash Bang",style: GoogleFonts.ubuntu(),),
-                  subtitle: Text("Need Some light",style: GoogleFonts.ubuntu(),),
-                  onChanged: (bool value){
-                    DynamicTheme.of(context).setBrightness(
-                        Theme.of(context).brightness == Brightness.light
-                            ? Brightness.dark
-                            : Brightness.light);
-                  },
-                ),
-              ),
+              Theme.of(context).brightness == Brightness.light
+                  ? Padding(
+                      padding: const EdgeInsets.only(left: 12.0),
+                      child: SwitchListTile(
+                        activeColor: Colors.purple,
+                        contentPadding: const EdgeInsets.all(0),
+                        value: _theme,
+                        title: Text(
+                          "Space Mode",
+                          style: GoogleFonts.ubuntu(),
+                        ),
+                        subtitle: Text(
+                          "Get that whiteness out of my sight",
+                          style: GoogleFonts.ubuntu(),
+                        ),
+                        onChanged: (bool value) {
+                          DynamicTheme.of(context).setBrightness(
+                              Theme.of(context).brightness == Brightness.light
+                                  ? Brightness.dark
+                                  : Brightness.light);
+                        },
+                      ),
+                    )
+                  : Padding(
+                      padding: const EdgeInsets.only(left: 12.0),
+                      child: SwitchListTile(
+                        activeColor: Colors.purple,
+                        contentPadding: const EdgeInsets.all(0),
+                        value: _theme,
+                        title: Text(
+                          "Flash Bang",
+                          style: GoogleFonts.ubuntu(),
+                        ),
+                        subtitle: Text(
+                          "Need Some light",
+                          style: GoogleFonts.ubuntu(),
+                        ),
+                        onChanged: (bool value) {
+                          DynamicTheme.of(context).setBrightness(
+                              Theme.of(context).brightness == Brightness.light
+                                  ? Brightness.dark
+                                  : Brightness.light);
+                        },
+                      ),
+                    ),
               const SizedBox(height: 20.0),
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
@@ -401,7 +433,9 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                   style: GoogleFonts.ubuntu(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
                   ),
                 ),
               ),
@@ -411,7 +445,10 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                   activeColor: Colors.purple,
                   contentPadding: const EdgeInsets.all(0),
                   value: true,
-                  title: Text("Receive App Updates",style: GoogleFonts.ubuntu(),),
+                  title: Text(
+                    "Receive App Updates",
+                    style: GoogleFonts.ubuntu(),
+                  ),
                   onChanged: null,
                 ),
               ),
@@ -422,17 +459,21 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
     );
   }
 
-  Widget _buildWidgetBackgroundCoverAlbum(double widthScreen, BuildContext context) {
+  Widget _buildWidgetBackgroundCoverAlbum(
+      double widthScreen, BuildContext context) {
     return Expanded(
       child: Stack(
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: CachedNetworkImageProvider("https://cdn.dribbble.com/users/77121/screenshots/10010364/media/ab7b4d1c22d3616066394686cc20bd9c.gif"),
+                image: CachedNetworkImageProvider(
+                    "https://cdn.dribbble.com/users/77121/screenshots/10010364/media/ab7b4d1c22d3616066394686cc20bd9c.gif"),
                 fit: BoxFit.cover,
               ),
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50),bottomRight: Radius.circular(50)),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50)),
             ),
             child: Container(
               decoration: BoxDecoration(
@@ -450,47 +491,65 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                   Colors.black.withOpacity(0.1),
                 ],
               ),
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50),bottomRight: Radius.circular(50)),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50)),
             ),
           ),
           Align(
             alignment: Alignment.center,
-            child: Container(
-              width: widthScreen / 2.5,
-              height: widthScreen / 2.5,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: CachedNetworkImageProvider("https://cdn.dribbble.com/users/1208043/screenshots/4355090/hello7a.gif"),
-                  fit: BoxFit.cover,
-                ),
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.black,
-                  width: 15.0,
-                ),
-              ),
-            ),
+            child: FutureBuilder(
+                future: Provider.of(context).auth.getCurrentUser(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return Container(
+                      width: widthScreen / 2.5,
+                      height: widthScreen / 2.5,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: snapshot.data.photoUrl ==
+                                  null
+                              ? CachedNetworkImageProvider(
+                                  "https://cdn.dribbble.com/users/1338391/screenshots/4962047/ghost-dribbble.gif")
+                              : CachedNetworkImageProvider(
+                                  snapshot.data.photoUrl),
+                          fit: BoxFit.cover,
+                        ),
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 15.0,
+                        ),
+                      ),
+                    );
+                  } else {
+                    return SpinKitFadingCircle(
+                      color: Colors.white,
+                      size: 35,
+                    );
+                  }
+                }),
           ),
           Align(
             alignment: Alignment.center,
-            child: Column(mainAxisAlignment: MainAxisAlignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 SizedBox(height: widthScreen / 1.5),
                 FutureBuilder(
                     future: Provider.of(context).auth.getCurrentUser(),
                     builder: (context, snapshot) {
-                      if (snapshot.connectionState ==
-                          ConnectionState.done) {
+                      if (snapshot.connectionState == ConnectionState.done) {
                         return Text(
                           "Hey, ${snapshot.data.displayName}",
                           style: GoogleFonts.ubuntu(
                             fontSize: 17,
                             fontWeight: FontWeight.w500,
-                            color: Theme.of(context).brightness ==
-                                Brightness.dark
-                                ? Colors.white
-                                : Colors.white,
+                            color:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.white,
                           ),
                         );
                       } else {
@@ -504,17 +563,16 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                 FutureBuilder(
                     future: Provider.of(context).auth.getCurrentUser(),
                     builder: (context, snapshot) {
-                      if (snapshot.connectionState ==
-                          ConnectionState.done) {
+                      if (snapshot.connectionState == ConnectionState.done) {
                         return Text(
                           "Email :  ${snapshot.data.email}",
                           style: GoogleFonts.ubuntu(
                             fontSize: 15,
                             fontWeight: FontWeight.w500,
-                            color: Theme.of(context).brightness ==
-                                Brightness.dark
-                                ? Colors.white
-                                : Colors.white,
+                            color:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.white,
                           ),
                         );
                       } else {
@@ -532,6 +590,7 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
     );
   }
 }
+
 void _openSignOutDrawer(BuildContext context) {
   showModalBottomSheet(
       shape: BottomSheetShape(),

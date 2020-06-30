@@ -29,7 +29,6 @@ class AuthService {
       password: password,
     );
 
-    // Update the username
     await updateUserName(name, authResult.user);
     return authResult.user.uid;
   }
