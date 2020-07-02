@@ -8,7 +8,6 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:in_app_update/in_app_update.dart';
 import 'package:launch_review/launch_review.dart';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -24,31 +23,11 @@ class About2 extends StatefulWidget {
 }
 
 class _About2State extends State<About2> {
-  AppUpdateInfo _updateInfo;
-
   GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
-
-  bool _flexibleUpdateAvailable = false;
-
   @override
   void initState() {
     super.initState();
   }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> checkForUpdate() async {
-    InAppUpdate.checkForUpdate().then((info) {
-      setState(() {
-        _updateInfo = info;
-      });
-    }).catchError((e) => _showError(e));
-  }
-
-  void _showError(dynamic exception) {
-    _scaffoldKey.currentState
-        .showSnackBar(SnackBar(content: Text(exception.toString())));
-  }
-
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
@@ -298,7 +277,6 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                     title: Text("Environment", style: GoogleFonts.ubuntu()),
                     subtitle: Text("Production", style: GoogleFonts.ubuntu()),
                     onTap: () {
-                      //open change location
                     },
                   ),
                   ListTile(
@@ -341,18 +319,6 @@ If you have any questions or suggestions about my Privacy Policy, do not hesitat
                       Navigator.push(
                           context, BouncyPageRoute(widget: Credits()));
                     },
-                  ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-                      child: Icon(
-                        Icons.update,
-                        color: Colors.purple,
-                      ),
-                    ),
-                    title:
-                        Text("Check for updates", style: GoogleFonts.ubuntu()),
-                    onTap: () => checkForUpdate(),
                   ),
                   ListTile(
                     leading: Icon(
