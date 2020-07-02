@@ -323,10 +323,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             ? Colors.black
                             : Colors.white,
                       ),
-                      title: Text('Notifications',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'Notifications',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       onTap: () {
                         Navigator.push(
                             context, BouncyPageRoute(widget: HomeScreen()));
@@ -348,10 +349,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             ? Colors.black
                             : Colors.white,
                       ),
-                      title: Text('Syllabus',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'Syllabus',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       onTap: () {
                         Navigator.push(
                             context, BouncyPageRoute(widget: sylPage()));
@@ -373,10 +375,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             ? Colors.black
                             : Colors.white,
                       ),
-                      title: Text('Marking Scheme',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'Marking Scheme',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       onTap: () {
                         Navigator.push(
                             context, BouncyPageRoute(widget: MarkingPage()));
@@ -395,10 +398,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         Entypo.news,
                         size: 18,
                       ),
-                      title: Text('Circulars',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'Circulars',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       trailing: Icon(
                         Ionicons.ios_arrow_down,
                         size: 12,
@@ -409,10 +413,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             Ionicons.ios_paper,
                             size: 18,
                           ),
-                          title: Text('Examination',
-                              style: GoogleFonts.ubuntu(
-                                  fontWeight: FontWeight.bold, fontSize: 15),
-                              ),
+                          title: Text(
+                            'Examination',
+                            style: GoogleFonts.ubuntu(
+                                fontWeight: FontWeight.bold, fontSize: 15),
+                          ),
                           onTap: () {
                             launch(
                                 "https://vtu.ac.in/en/category/exam-circulars-notifications/");
@@ -427,10 +432,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             Ionicons.ios_paper,
                             size: 18,
                           ),
-                          title: Text('Administration',
-                              style: GoogleFonts.ubuntu(
-                                  fontWeight: FontWeight.bold, fontSize: 15),
-                              ),
+                          title: Text(
+                            'Administration',
+                            style: GoogleFonts.ubuntu(
+                                fontWeight: FontWeight.bold, fontSize: 15),
+                          ),
                           onTap: () {
                             launch(
                                 "https://vtu.ac.in/en/category/administration-circulars/");
@@ -454,10 +460,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             ? Colors.black
                             : Colors.white,
                       ),
-                      title: Text('Results',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'Results',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       onTap: () {
                         launch("https://results.vtu.ac.in/");
                       },
@@ -475,10 +482,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         FontAwesomeIcons.questionCircle,
                         size: 18,
                       ),
-                      title: Text('FAQs',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'FAQs',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       onTap: () {
                         Navigator.push(
                             context, BouncyPageRoute(widget: FAQPage()));
@@ -500,10 +508,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             ? Colors.black
                             : Colors.white,
                       ),
-                      title: Text('Feedback',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'Feedback',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       onTap: () {
                         Wiredash.of(context).show();
                       },
@@ -543,10 +552,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         Octicons.settings,
                         size: 18,
                       ),
-                      title: Text('Settings',
-                          style: GoogleFonts.ubuntu(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
+                      title: Text(
+                        'Settings',
+                        style: GoogleFonts.ubuntu(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                       onTap: () {
                         Navigator.push(
                             context, BouncyPageRoute(widget: About2()));
@@ -1716,7 +1726,6 @@ class _ScaffoldOnlyState extends State<ScaffoldOnly> {
 
   @override
   Widget build(BuildContext context) {
-
     InterstitialAd newTapAd = ams.getNewTapInterstitial();
     newTapAd.load();
     return Scaffold(
@@ -1761,7 +1770,7 @@ class _ScaffoldOnlyState extends State<ScaffoldOnly> {
                             fit: BoxFit.cover),
                       ),
                       child: Text(
-                        snapshot.data.documents[6]['engquote1'],
+                        snapshot.data.documents[7]['engquote1'],
                         style: GoogleFonts.ubuntu(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -3808,24 +3817,34 @@ class _ScaffoldOnlyState extends State<ScaffoldOnly> {
                           endIndent: 250,
                         ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 16, top: 8),
-                    child: Container(
-                      color: Theme.of(context).brightness == Brightness.light
-                          ? Colors.black54
-                          : Colors.white30,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(top: 8),
+                    child: ExpansionTile(
+                      title: Center(
                         child: Text(
-                          snapshot.data.documents[4]['vidT'],
+                          snapshot.data.documents[5]['vidT'],
                           style: GoogleFonts.ubuntu(
                               color: Theme.of(context).brightness ==
-                                      Brightness.light
-                                  ? Colors.white
+                                  Brightness.light
+                                  ? Colors.black
                                   : Colors.white,
                               fontWeight: FontWeight.w400,
-                              fontSize: 14),
+                              fontSize: 18),
                         ),
                       ),
+                      children: <Widget>[
+                        ListTile(
+                          title: Text(
+                            snapshot.data.documents[4]['sub'],
+                            style: GoogleFonts.ubuntu(
+                                color: Theme.of(context).brightness ==
+                                    Brightness.light
+                                    ? Colors.black
+                                    : Colors.white,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Padding(
@@ -3835,9 +3854,9 @@ class _ScaffoldOnlyState extends State<ScaffoldOnly> {
                       left: 16,
                       bottom: 20,
                     ),
-                    child: snapshot.data.documents[5]['vids'] != ""
+                    child: snapshot.data.documents[6]['vids'] != ""
                         ? AwsomeVideoPlayer(
-                            snapshot.data.documents[5]['vids'],
+                            snapshot.data.documents[6]['vids'],
                             playOptions: VideoPlayOptions(
                                 seekSeconds: 30,
                                 aspectRatio: 4 / 3,
@@ -3945,6 +3964,7 @@ class _ScaffoldOnlyState extends State<ScaffoldOnly> {
     );
   }
 }
+
 enum _AniProps { opacity, translateX }
 
 class FadeIn extends StatelessWidget {
@@ -3974,4 +3994,3 @@ class FadeIn extends StatelessWidget {
     );
   }
 }
-
