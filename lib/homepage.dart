@@ -1692,7 +1692,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //    );
 //  }
 //}
-
 class ScaffoldOnly extends StatefulWidget {
   @override
   _ScaffoldOnlyState createState() => _ScaffoldOnlyState();
