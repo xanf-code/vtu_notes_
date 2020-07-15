@@ -1,5 +1,0 @@
-* linguist-vendored
-*.kt linguist-vendored=false
-*.swift linguist-vendored=false
-*.dart linguist-vendored=false
-*.ruby linguist-vendored=false
